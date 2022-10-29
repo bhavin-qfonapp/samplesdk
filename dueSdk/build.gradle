@@ -2,7 +2,23 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
 }
+ext {
+    PUBLISH_GROUP_ID = 'io.github.bhavin-qfonapp'
+    PUBLISH_VERSION = '0.1.0'
+    PUBLISH_ARTIFACT_ID = 'samplesdk'
+    PUBLISH_DESCRIPTION = 'Sample sdk for learn'
+    PUBLISH_URL = 'https://github.com/bhavin-qfonapp/samplesdk'
+    PUBLISH_LICENSE_NAME = 'Apache License'
+    PUBLISH_LICENSE_URL = 'https://github.com/bhavin-qfonapp/samplesdk/LICENSE'
+    PUBLISH_DEVELOPER_ID = 'bhavin'
+    PUBLISH_DEVELOPER_NAME = 'Bhavin Qfonapp'
+    PUBLISH_DEVELOPER_EMAIL = 'bhavin.qfonapp11@gmail.com'
+    PUBLISH_SCM_CONNECTION = 'scm:git:github.com/bhavin-qfonapp/samplesdk.git'
+    PUBLISH_SCM_DEVELOPER_CONNECTION = 'scm:git:ssh://github.com/bhavin-qfonapp/samplesdk.git'
+    PUBLISH_SCM_URL = 'https://github.com/bhavin-qfonapp/samplesdk/tree/master'
+}
 
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
 android {
     namespace 'com.bhavin.duesdk'
     compileSdk 32
